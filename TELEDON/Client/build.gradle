@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group = 'ro.mpp'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+application{
+    mainClass='ro.mpp.StartClient'
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation project(':Model')
+    implementation project(':Persistence')
+    implementation project(':Services')
+    implementation project(':Networking')
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ro.mpp'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+application{
+    mainClass='ro.mpp.StartServer'
+}
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation project(':Model')
+    implementation project(':Persistence')
+    implementation project(':Services')
+    implementation project(':Networking')
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.45.1.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}

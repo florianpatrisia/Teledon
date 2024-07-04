@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp.teledon.controller.AddVoluntarController">
+   <children>
+      <Label layoutX="105.0" layoutY="92.0" text="Nume" />
+      <Label layoutX="105.0" layoutY="132.0" text="Username" />
+      <Label layoutX="105.0" layoutY="172.0" text="Parola" />
+      <TextField fx:id="TextFiledNume" layoutX="177.0" layoutY="88.0" />
+      <TextField fx:id="TextFiledUsername" layoutX="178.0" layoutY="128.0" />
+      <TextField fx:id="TextFiledParola" layoutX="179.0" layoutY="168.0" />
+      <Button fx:id="ButtonAdauga" onAction="#handleAddVoluntar" layoutX="112.0" layoutY="239.0" mnemonicParsing="false" text="Adauga" />
+      <Button fx:id="ButtonIesire"  onAction="#handleClose" layoutX="274.0" layoutY="239.0" mnemonicParsing="false" text="Iesi" />
+   </children>
+</AnchorPane>

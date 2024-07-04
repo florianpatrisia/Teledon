@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp.teledon.HomeController">
+   <children>
+      <Label layoutX="47.0" layoutY="26.0" text="Toate cazuile caritabile: " />
+      <TableView fx:id="TableViewCazCaritabil" layoutX="35.0" layoutY="53.0" prefHeight="122.0" prefWidth="251.0">
+        <columns>
+          <TableColumn fx:id="ColumnNumeCazCaritabil" prefWidth="83.79998779296875" text="Nume" />
+            <TableColumn fx:id="ColumnSumaStransaCazCaritabil" prefWidth="84.0" text="Suma stransa" />
+            <TableColumn fx:id="ColumnSumaFinalaCazCaritabil" prefWidth="78.4000244140625" text="Suma finala" />
+        </columns>
+      </TableView>
+      <Label layoutX="406.0" layoutY="26.0" text="Adauga donatie noua:" />
+      <Label layoutX="358.0" layoutY="57.0" text="Nume" />
+      <Label layoutX="356.0" layoutY="89.0" text="Adresa" />
+      <Label layoutX="354.0" layoutY="119.0" text="Telefon" />
+      <Label layoutX="359.0" layoutY="153.0" text="Suma" />
+      <TextField fx:id="TextFiledNume" layoutX="405.0" layoutY="53.0" />
+      <TextField fx:id="TextFiledAdresa" layoutX="405.0" layoutY="85.0" />
+      <TextField fx:id="TextFiledTelefon" layoutX="405.0" layoutY="115.0" />
+      <TextField fx:id="TextFiledSumaDonata" layoutX="405.0" layoutY="149.0" />
+      <Button fx:id="ButtonAdaugaDonatie" layoutX="429.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleAdaugaDonatie" text="Adauga donatia" />
+      <Button fx:id="ButtonLogout" layoutX="444.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="44.0" prefWidth="102.0" text="Log out" />
+      <Label layoutX="40.0" layoutY="191.0" text="Cauta donator dupa nume" />
+      <TextField fx:id="TextFiledNumeDonator" layoutX="30.0" layoutY="209.0" />
+      <Button fx:id="ButtonCautaDonator" layoutX="193.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleCautaDonatorDupaNume" text="Cauta donator" />
+      <TableView fx:id="TableViewDonator" layoutX="35.0" layoutY="252.0" prefHeight="128.0" prefWidth="270.0">
+         <columns>
+            <TableColumn fx:id="ColumnNumeDonator" prefWidth="82.39999008178711" text="Nume" />
+            <TableColumn fx:id="ColumnAdresaDonator" prefWidth="92.79998779296875" text="Adresa" />
+            <TableColumn fx:id="ColumnTelefonDonator" prefWidth="91.60005187988281" text="Telefon" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,1 @@
+export const CAZURI_CARITABILE_BASE_URL='http://localhost:8080/teledon/cazuri-caritabile';
